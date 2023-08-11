@@ -4,15 +4,44 @@ import AlexaImage from "./images/alexa.png";
 import CortanaImage from "./images/cortana.png";
 import SiriImage from "./images/siri.png"
  
+{/* <button onClick={() => { console.log("Hi there")}}></button>  */}
+
 function App(){
     return(
         <div>
-            <div className="font-sans text-green-400 bg-red-500 ">Personal Digital Assistants </div>
+            <section className="hero is-primary">
+                <div className="hero-body">
+                    <p className="title">Personal Digital Assistants</p>
+                </div>
+            </section>
+            
              <div className="container">
                 <section className="section">
-                    <ProfileCard title="Alexa" handle="@alexa99" image={AlexaImage} alt="Alexa-image"/>
-                    <ProfileCard title="Siri" handle="@siri01" image={SiriImage} alt="Siri-image"/>
-                    <ProfileCard title="Cortana " handle="@cortana32" image={CortanaImage} alt="Cortana-image"/>
+                    <div className="columns">
+                        <div className="column is-3">
+                            <ProfileCard 
+                            title="Alexa" 
+                            handle="@alexa99" 
+                            image={AlexaImage} alt="Alexa-image"
+                            description="Alexa was created by amazon and helps you buy things."/>              
+                        </div>                                           
+                        <div className="column is-3">
+                            <ProfileCard 
+                            title="Siri" 
+                            handle="@siri01" 
+                            image={SiriImage} 
+                            alt="Siri-image"
+                            description="Siri was made by Apple and is being helpful"/>
+                        </div>
+                        <div className="column is-3">
+                            <ProfileCard 
+                            title="Cortana " 
+                            handle="@cortana32" 
+                            image={CortanaImage} 
+                            alt="Cortana-image"
+                            description="Cortana was crwated by Microsoft and knows what it does"/>
+                        </div>
+                    </div>
                 </section>
              </div>
         </div>
